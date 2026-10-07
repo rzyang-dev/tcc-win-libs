@@ -1,0 +1,40 @@
+# 只跟踪交付物 portable/。以下目录是构建输入或可再生的验证副本，
+# 有意不入库（理由见 README.md）。
+copy-test/
+tool/
+libs/
+scratch/
+
+# 构建产物
+*.o
+*.obj
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.a
+!**/toolchain/tcc/lib/libtcc1-*.a
+bin/_*
+**/_verify_*
+**/dsh_verify*
+*.bin
+*.tga
+*.ppm
+dsh_out.*
+
+# 编辑器 / 系统
+.vs/
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+debug.log
+*.log
+!portable/docs/*.log
+
+# 自检用的临时目录（每轮随机 GUID，不应入库）
+portable/tmp/
+copy-test/
